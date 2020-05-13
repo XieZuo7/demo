@@ -7,7 +7,6 @@
     let redSlider = document.querySelector('#red');
     let greenSlider = document.querySelector('#green');
     let blueSlider = document.querySelector('#blue');
-    let text = document.querySelector('#value10');
     let port;
 
     function connect() {
@@ -18,7 +17,6 @@
         port.onReceive = data => {
           let textDecoder = new TextDecoder();
           console.log(textDecoder.decode(data));
-	text.value=textDecoder.decode(data);
         }
         port.onReceiveError = error => {
           console.error(error);
@@ -43,7 +41,6 @@
     redSlider.addEventListener('input', onUpdate);
     greenSlider.addEventListener('input', onUpdate);
     blueSlider.addEventListener('input', onUpdate);
-    text.addEventListener('input', onUpdate);
 
     connectButton.addEventListener('click', function() {
       if (port) {
