@@ -22,6 +22,7 @@
 <input id="range10" type="range" min="0" max="70" value="10"step="1" oninput="change()" onchange="change()">
 		<span id="value10">10</span>
 
+
 	<center><canvas id="mc" width="900" height="450" style="border:1px solid black;border-radius:30px;"></canvas></center>
 	<script type="text/javascript">
 function change() {
@@ -30,7 +31,6 @@ function change() {
 
   	var value10 = document.getElementById('range10').value ;
   	document.getElementById('value10').innerHTML = value10;
-	
 	}
 		var canvas=document.getElementById('mc');
 		var ctx=canvas.getContext('2d');
@@ -75,7 +75,8 @@ function draw(){
 		ctx.lineTo(560,120);
 		ctx.lineTo(640,200);
 		ctx.lineTo(720,'380'-5*document.getElementById('value9').innerHTML);
-		ctx.lineTo(800,'380'-5*document.getElementById('value10').innerHTML);
+		ctx.lineTo(800,150);
+		//ctx.lineTo(800,'380'-5*document.getElementById('value10').innerHTML);
 		ctx.stroke();
 requestAnimationFrame(draw);
 }
