@@ -37,7 +37,7 @@ function change() {
 		
 
 function init(){
-       draw()
+       draw();
 }
 init();
 
@@ -81,7 +81,7 @@ function draw(){
 requestAnimationFrame(draw);
 }
 
-(function () {
+function () {
     var old = console.log;
     var logger = document.getElementById('log');
     console.log = function (message) {
@@ -91,7 +91,7 @@ requestAnimationFrame(draw);
             logger.innerHTML += message + '<br />';
         }
     }
-})();
+}
 	</script>
 
 
