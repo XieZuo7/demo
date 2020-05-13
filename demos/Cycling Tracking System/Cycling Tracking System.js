@@ -1,33 +1,6 @@
 (function() {
   'use strict';
-var infoConsole = document.getElementById('info');
-if (infoConsole) {
-    if (console) {
-        var _console = {
-            log: console.log
-        }
-        console.log = function (attr) {
-            _console.log(attr);
-            var str = JSON.stringify(attr, null, 4);
-            var node = document.createElement("H1");
-            var textnode = document.createTextNode(str);
- 
-            node.appendChild(textnode);
-            infoConsole.appendChild(node);
-        }
-    }
- 
-    function show() {
-        var type = infoConsole.getAttribute("type");
-        if (type === "0") {
-            infoConsole.style.cssText = "width:100vw;height:40vh;";
-            infoConsole.setAttribute("type", "1");
-        } else {
-            infoConsole.removeAttribute('style');
-            infoConsole.setAttribute("type", "0");
-        }
-    }
-}
+
   document.addEventListener('DOMContentLoaded', event => {
     let connectButton = document.querySelector("#connect");
     let statusDisplay = document.querySelector('#status');
