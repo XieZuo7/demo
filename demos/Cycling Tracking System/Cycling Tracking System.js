@@ -18,7 +18,8 @@
           //let textDecoder = new TextDecoder();
           //console.log(textDecoder.decode(data));
           console.log(data);
-          console.clear();
+          delay(100);
+          console.clear(data);
         }
         port.onReceiveError = error => {
           console.error(error);
