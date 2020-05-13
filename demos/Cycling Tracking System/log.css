@@ -1,0 +1,23 @@
+
+#info {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(10, 10, 10, .8);
+    overflow: scroll;
+    font-size: 10px;
+    z-index: 999;
+    -webkit-tap-highlight-color: transparent;
+}
+ 
+#info h1 {
+    color: green;
+    word-wrap: break-word;
+    white-space: pre;
+}
+ 
+#info h1:nth-child(odd) {
+    background-color: rgba(0, 0, 0, .4);
+}
