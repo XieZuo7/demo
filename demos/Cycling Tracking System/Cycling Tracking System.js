@@ -15,9 +15,9 @@
         connectButton.textContent = 'Disconnect';
 
         port.onReceive = data => {
-          //let textDecoder = new TextDecoder();
-          //console.log(textDecoder.decode(data));
-          console.log(data);
+          let textDecoder = new TextDecoder();
+          console.log(textDecoder.decode('h'));
+          
 
         }
         port.onReceiveError = error => {
