@@ -21,7 +21,7 @@
           document.getElementById("value10").innerHTML = textDecoder.decode(data);
           let view = new Uint8Array(3);
           view[0] = parseInt(textDecoder.decode(data));
-          view[1] = parseInt(textDecoder.decode(data));
+          view[1] = data;
           view[2] = parseInt(textDecoder.decode(data));
           document.getElementById("value8").innerHTML = view[0];
           document.getElementById("value9").innerHTML = view[1];
