@@ -16,6 +16,7 @@
 
         port.onReceive = data => {
           console.clear();
+          
           let textDecoder = new TextDecoder();
           console.log(textDecoder.decode(data));
         }
