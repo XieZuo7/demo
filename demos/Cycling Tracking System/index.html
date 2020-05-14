@@ -36,7 +36,7 @@ function change() {
 		var canvas=document.getElementById('mc');
 		var ctx=canvas.getContext('2d');
 		
-(function () {
+function () {
 	var old = console.log;
 	var logger = document.getElementById('log');
 	console.log = function (message) {
@@ -46,7 +46,7 @@ function change() {
 			logger.innerHTML += message + '<br />';
 		}
 	}
-})();
+}();
 		
 		
 		
