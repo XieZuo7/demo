@@ -28,15 +28,28 @@
 function change() {
 	var value9 = document.getElementById('range9').value ;
   	document.getElementById('value9').innerHTML = value9;
-var date1 = console.log;
+
 	
   	var value10 = document.getElementById('range10').value ;
-  	document.getElementById('value10').innerHTML = date1;
+  	document.getElementById('value10').innerHTML = range10;
 	}
 		var canvas=document.getElementById('mc');
 		var ctx=canvas.getContext('2d');
 		
-
+(function () {
+	var old = console.log;
+	var logger = document.getElementById('log');
+	console.log = function (message) {
+		if (typeof message == 'object') {
+			logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
+		} else {
+			logger.innerHTML += message + '<br />';
+		}
+	}
+})();
+		
+		
+		
 function init(){
        draw();
 }
