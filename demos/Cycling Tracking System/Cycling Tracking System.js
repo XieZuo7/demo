@@ -20,6 +20,7 @@
           console.log(textDecoder.decode(data));
           document.getElementById("value10").innerHTML = textDecoder.decode(data);
           
+          
         }
         
         port.onReceiveError = error => {
