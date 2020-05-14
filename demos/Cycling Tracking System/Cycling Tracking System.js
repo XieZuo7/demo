@@ -20,8 +20,12 @@
           console.log(textDecoder.decode(data));
           document.getElementById("value10").innerHTML = textDecoder.decode(data);
           let view = new Uint8Array(3);
-          view[0] = parseInt(textDecoder.decode(data));
-          view[1] = data;
+          var string = textDecoder.decode(data);
+          var reg = /[1-9][0-9]*/g;
+          var number = string.match(reg);
+
+          view[0] = number[0];
+          view[1] = number[1];
           view[2] = parseInt(textDecoder.decode(data));
           document.getElementById("value8").innerHTML = view[0];
           document.getElementById("value9").innerHTML = view[1];
