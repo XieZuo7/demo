@@ -18,7 +18,8 @@
           
           let textDecoder = new TextDecoder();
           console.log(textDecoder.decode(data));
-           //console.log("Hello Runoob!");
+          document.getElementById("value10").innerHTML = textDecoder;
+          
         }
         
         port.onReceiveError = error => {
