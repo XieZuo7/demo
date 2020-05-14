@@ -18,7 +18,7 @@
           
           let textDecoder = new TextDecoder();
           console.log(textDecoder.decode(data));
-          document.getElementById("value10").innerHTML = console.log;
+          document.getElementById("value10").innerHTML = console.log(textDecoder.decode(data));
           
         }
         
