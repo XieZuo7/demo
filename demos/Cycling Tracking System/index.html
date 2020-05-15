@@ -72,14 +72,14 @@ function draw(){
      	         document.getElementById("value9").innerHTML++;
         	    }else{document.getElementById("value10").innerHTML++;}
 			
-       		   }
+       		   }else if(document.getElementById('valueL').innerHTML < 1000){ii = 0;}
 			
 
 
        		
 		//折线
 		ctx.moveTo(80,180);
-		ctx.lineTo(160,180);
+		ctx.lineTo(160,200);
 		ctx.lineTo(240,200);
 		ctx.lineTo(320,130);
 		ctx.lineTo(400,180);
