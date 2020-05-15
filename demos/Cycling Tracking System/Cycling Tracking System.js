@@ -4,9 +4,6 @@
   document.addEventListener('DOMContentLoaded', event => {
     let connectButton = document.querySelector("#connect");
     let statusDisplay = document.querySelector('#status');
-    let redSlider = document.querySelector('#red');
-    let greenSlider = document.querySelector('#green');
-    let blueSlider = document.querySelector('#blue');
     let port;
 
     function connect() {
@@ -51,10 +48,6 @@
       view[2] = parseInt(blueSlider.value);
       port.send(view);
     };
-
-    redSlider.addEventListener('input', onUpdate);
-    greenSlider.addEventListener('input', onUpdate);
-    blueSlider.addEventListener('input', onUpdate);
 
     connectButton.addEventListener('click', function() {
       if (port) {
