@@ -20,6 +20,10 @@
           var string = textDecoder.decode(data);
           var reg = /\d+/g;
           var number = string.match(reg);
+          int value8 = 0;
+          int value9 = 0;
+          int value10 = 0;
+          int i = 0;
 
           view[0] = number[0];
           view[1] = number[1];
@@ -27,6 +31,18 @@
           document.getElementById("valueDay").innerHTML = view[0];
           document.getElementById("valueL").innerHTML = view[1];
           document.getElementById("valueR").innerHTML = view[2];
+          if(view[1] > 1000 && i < 500){
+            i = view[1];
+            if(view[0] == 8){
+              value8++;
+            }else if(view[0] == 9){
+              value9++;
+            }else{value10++;}
+          }else if(view[1] < 1000 && i > 1000){i = 0;
+          }
+          
+          
+          
         }
         
         port.onReceiveError = error => {
