@@ -28,15 +28,7 @@
           document.getElementById("valueDay").innerHTML = view[0];
           document.getElementById("valueL").innerHTML = view[1];
           document.getElementById("valueR").innerHTML = view[2];
-          if(view[1] > 1000 && i < 500){
-            i = view[1];
-            if(view[0] == 8){
-              document.getElementById("value8").innerHTML++;
-            }else if(view[0] == 9){
-              document.getElementById("value9").innerHTML++;
-            }else{document.getElementById("value10").innerHTML++;}
-          }else if(view[1] < 1000 && i > 1000){i = 0;
-          }
+          
           
           
           
