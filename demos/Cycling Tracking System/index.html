@@ -71,6 +71,7 @@ function draw(){
       	  	    }else if(document.getElementById('valueDay').innerHTML == 9){
      	         document.getElementById("value9").innerHTML++;
         	    }else{document.getElementById("value10").innerHTML++;}
+			delay(200);
        		   }else if(document.getElementById('valueL').innerHTML < 1000 && ii > 1000){ii = 0;}
 
 		//折线
@@ -81,9 +82,9 @@ function draw(){
 		ctx.lineTo(400,180);
 		ctx.lineTo(480,170);
 		ctx.lineTo(560,120);
-		ctx.lineTo(640,'380'-3*document.getElementById('value8').innerHTML);
-		ctx.lineTo(720,'380'-3*document.getElementById('value9').innerHTML);
-		ctx.lineTo(800,'380'-3*document.getElementById('value10').innerHTML);
+		ctx.lineTo(640,'380'-5*document.getElementById('value8').innerHTML);
+		ctx.lineTo(720,'380'-5*document.getElementById('value9').innerHTML);
+		ctx.lineTo(800,'380'-5*document.getElementById('value10').innerHTML);
 		ctx.stroke();
 requestAnimationFrame(draw);
 }
