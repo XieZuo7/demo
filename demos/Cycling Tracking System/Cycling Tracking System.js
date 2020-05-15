@@ -24,9 +24,9 @@
           view[0] = number[0];
           view[1] = number[1];
           view[2] = number[2];
-          document.getElementById("value8").innerHTML = view[0];
-          document.getElementById("value9").innerHTML = view[1];
-          document.getElementById("value10").innerHTML = view[2];
+          document.getElementById("valueDay").innerHTML = view[0];
+          document.getElementById("valueL").innerHTML = view[1];
+          document.getElementById("valueR").innerHTML = view[2];
         }
         
         port.onReceiveError = error => {
