@@ -20,7 +20,7 @@
 	<div style="position: absolute; top: 30px;left: 85px;background-color: white;"><span id="valueR">30</span></div>
 	<div style="position: absolute; top: -15px;left: 10px;background-color: white;">右侧受力</div></div>
 		
-		<span id="ii">30</span>
+		<span id="valueDay">30</span>
 	  <span id="value8"></span>
 	  <span id="value9"></span>
 	  <span id="value10"></span>
@@ -64,7 +64,7 @@ function draw(){
 			ctx.strokeText('第'+'1'*(i+1)+'天',80+80*i,435);
 		}
 		var ii=0;
-		if(document.getElementById('valueL').innerHTML > 1000 && ii < 500){
+		if(document.getElementById('valueL').innerHTML > 1000 || ii < 500){
     	   	     ii = document.getElementById('valueL').innerHTML;
       		      if(document.getElementById('valueDay').innerHTML == 8){
      	         document.getElementById("value8").innerHTML++;
@@ -72,11 +72,11 @@ function draw(){
      	         document.getElementById("value9").innerHTML++;
         	    }else{document.getElementById("value10").innerHTML++;}
 			
-       		   }else if(document.getElementById('valueL').innerHTML < 1000 && ii > 1000){ii = 0;}
+       		   }else if(document.getElementById('valueL').innerHTML < 1000 || ii > 1000){ii = 0;}
 
 		//折线
 		ctx.moveTo(80,180);
-		ctx.lineTo(160,150);
+		ctx.lineTo(160,200);
 		ctx.lineTo(240,200);
 		ctx.lineTo(320,130);
 		ctx.lineTo(400,180);
