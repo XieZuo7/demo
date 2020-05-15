@@ -20,7 +20,7 @@
           var string = textDecoder.decode(data);
           var reg = /\d+/g;
           var number = string.match(reg);
-          int i = 0;
+          
 
           view[0] = number[0];
           view[1] = number[1];
