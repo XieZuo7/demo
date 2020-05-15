@@ -21,7 +21,7 @@
           //document.getElementById("value10").innerHTML = textDecoder.decode(data);
           let view = new Uint8Array(3);
           var string = textDecoder.decode(data);
-          var reg = /[1-9][0-9]*/g;
+          var reg = /\d+/g;
           var number = string.match(reg);
 
           view[0] = number[0];
