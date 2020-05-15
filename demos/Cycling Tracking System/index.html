@@ -64,7 +64,7 @@ function draw(){
 			ctx.strokeText('第'+'1'*(i+1)+'天',80+80*i,435);
 		}
 		var ii=0;
-		if(document.getElementById('valueL').innerHTML == 1000 && ii < 500){
+		if(document.getElementById('valueL').innerHTML > 1000 && document.getElementById('valueL').innerHTML < 1100 && ii < 500){
     	   	     ii = document.getElementById('valueL').innerHTML;
       		      if(document.getElementById('valueDay').innerHTML == 8){
      	         document.getElementById("value8").innerHTML++;
@@ -72,7 +72,7 @@ function draw(){
      	         document.getElementById("value9").innerHTML++;
         	    }else{document.getElementById("value10").innerHTML++;}
 			
-       		   }else if(document.getElementById('valueL').innerHTML == 1000 && ii > 1000){ii = 0;}
+       		   }else if(document.getElementById('valueL').innerHTML > 1000 && document.getElementById('valueL').innerHTML < 1100 && ii > 1000){ii = 0;}
 
 		//折线
 		ctx.moveTo(80,180);
