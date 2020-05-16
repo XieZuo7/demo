@@ -16,7 +16,7 @@
           let textDecoder = new TextDecoder();
           console.log(textDecoder.decode(data));
           //document.getElementById("value10").innerHTML = textDecoder.decode(data);
-          let view = new Array(5);
+          let view = new Array(3);
           var string = textDecoder.decode(data);
           var reg = /\d+/g;
           var number = string.match(reg);
@@ -28,15 +28,6 @@
           document.getElementById("valueDay").innerHTML = view[0];
           document.getElementById("valueL").innerHTML = view[1];
           document.getElementById("valueR").innerHTML = view[2];
-          
-          if(number[1] > 1000 && view[4] <1)
-	{
-             view[3] = number[1];
-             view[4] = 1;
-             document.getElementById('value10').innerHTML++;
-           }else if(number[1] < view[3]){view[4] = 0;}
-          
-          
         }
         
         port.onReceiveError = error => {
