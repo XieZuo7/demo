@@ -16,7 +16,7 @@
           let textDecoder = new TextDecoder();
           console.log(textDecoder.decode(data));
           //document.getElementById("value10").innerHTML = textDecoder.decode(data);
-          let view = new Array(6);
+          let view = new Array(5);
           var string = textDecoder.decode(data);
           var reg = /\d+/g;
           var number = string.match(reg);
@@ -29,12 +29,12 @@
           document.getElementById("valueL").innerHTML = view[1];
           document.getElementById("valueR").innerHTML = view[2];
           
-          if(number[1] > 1000 && view[5] <1)
+          if(number[1] > 1000 && view[4] <1)
 	{
-             view[4] = number[1];
-             view[5] = 1;
+             view[3] = number[1];
+             view[4] = 1;
              document.getElementById('value10').innerHTML++;
-           }else if(number[1] < view[4]){view[5] = 0;}
+           }else if(number[1] < view[3]){view[4] = 0;}
           
           
         }
