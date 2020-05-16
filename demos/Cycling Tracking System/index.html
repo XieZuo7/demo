@@ -34,11 +34,7 @@
 function change() {
 	//document.getElementById('value9').innerHTML = document.getElementById('range9').value;
 	
-		if(document.getElementById('value88').innerHTML == 1){
-     	         document.getElementById("value8").innerHTML++;
-      	  	    }else if(document.getElementById('value99').innerHTML == 1){
-     	         document.getElementById("value9").innerHTML++;
-        	    }else{document.getElementById("value10").innerHTML++;}
+		
   	 
   	//document.getElementById('value10').innerHTML = document.getElementById('range10').value;
 	}
@@ -48,6 +44,11 @@ function change() {
 
 function init(){
        draw();
+	if(document.getElementById('value88').innerHTML == 1){
+     	         document.getElementById("value8").innerHTML++;
+      	  	    }else if(document.getElementById('value99').innerHTML == 1){
+     	         document.getElementById("value9").innerHTML++;
+        	    }else{document.getElementById("value10").innerHTML++;}
 }
 init();
 
@@ -98,7 +99,7 @@ function draw(){
        		
 		//折线
 		ctx.moveTo(80,180);
-		ctx.lineTo(160,200);
+		ctx.lineTo(160,180);
 		ctx.lineTo(240,200);
 		ctx.lineTo(320,130);
 		ctx.lineTo(400,180);
