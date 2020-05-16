@@ -21,6 +21,9 @@
 	<div style="position: absolute; top: -15px;left: 10px;background-color: white;">右侧受力</div></div>
 		
 		<span id="valueDay">30</span>
+	  <span id="value88"></span>
+	  <span id="value99"></span>
+	  <span id="value11"></span>
 	  <span id="value8"></span>
 	  <span id="value9"></span>
 	  <span id="value10"></span>
@@ -68,10 +71,20 @@ function draw(){
 		{
 			
       		      if(document.getElementById('valueDay').innerHTML == 8){
-     	         document.getElementById("value8").innerHTML = 1;
+     	         document.getElementById("value88").innerHTML = 1;
       	  	    }else if(document.getElementById('valueDay').innerHTML == 9){
-     	         document.getElementById("value9").innerHTML = 1;
-        	    }else{document.getElementById("value10").innerHTML = 1;}
+     	         document.getElementById("value99").innerHTML = 1;
+        	    }else{document.getElementById("value11").innerHTML = 1;}
+			
+       		 } 
+		if(document.getElementById('valueL').innerHTML < 1000)
+		{
+			
+      		      if(document.getElementById('valueDay').innerHTML == 8){
+     	         document.getElementById("value88").innerHTML = 0;
+      	  	    }else if(document.getElementById('valueDay').innerHTML == 9){
+     	         document.getElementById("value99").innerHTML = 0;
+        	    }else{document.getElementById("value11").innerHTML = 0;}
 			
        		 } 
 
@@ -79,15 +92,15 @@ function draw(){
        		
 		//折线
 		ctx.moveTo(80,180);
-		ctx.lineTo(160,180);
+		ctx.lineTo(160,200);
 		ctx.lineTo(240,200);
 		ctx.lineTo(320,130);
 		ctx.lineTo(400,180);
 		ctx.lineTo(480,170);
 		ctx.lineTo(560,120);
-		ctx.lineTo(640,'380'-5*document.getElementById('value8').innerHTML);
-		ctx.lineTo(720,'380'-5*document.getElementById('value9').innerHTML);
-		ctx.lineTo(800,'380'-5*document.getElementById('value10').innerHTML);
+		ctx.lineTo(640,'380'-5*document.getElementById('value88').innerHTML);
+		ctx.lineTo(720,'380'-5*document.getElementById('value99').innerHTML);
+		ctx.lineTo(800,'380'-5*document.getElementById('value11').innerHTML);
 		ctx.stroke();
 requestAnimationFrame(draw);
 }
