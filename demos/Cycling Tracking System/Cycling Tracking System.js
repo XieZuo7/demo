@@ -30,11 +30,11 @@
           document.getElementById("valueR").innerHTML = view[2];
           
           if(number[1] > 1000 && view[5] <1)
-		       {
+	{
              view[4] = number[1];
              view[5] = 1;
              document.getElementById('value10').innerHTML++;
-           }else if(number[1] > 1000){view[5] = 0;}
+           }else if(number[1] < view[4]){view[5] = 0;}
           
           
         }
