@@ -16,7 +16,7 @@
           let textDecoder = new TextDecoder();
           console.log(textDecoder.decode(data));
           //document.getElementById("value10").innerHTML = textDecoder.decode(data);
-          let view = new Array(5);
+          let view = new Array(6);
           var string = textDecoder.decode(data);
           var reg = /\d+/g;
           var number = string.match(reg);
