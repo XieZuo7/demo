@@ -25,7 +25,6 @@
 	  <span id="value9"></span>
 	  <span id="value10"></span>
 	  
-	  
 	<canvas id="mc" width="900" height="450" style="position: absolute; top: 200px;right: 300px;border:1px solid black;border-radius:30px;"></canvas>
 	<script type="text/javascript">
 function change() {
@@ -66,16 +65,25 @@ function draw(){
 			ctx.strokeText('第'+'1'*(i+1)+'天',80+80*i,435);
 		}
 		
-		if(document.getElementById('valueL').innerHTML > 1000 && document.getElementById('valueL').innerHTML < 2000)
+		if(document.getElementById('valueL').innerHTML > 1000)
 		{
 			
       		      if(document.getElementById('valueDay').innerHTML == 8){
-     	         document.getElementById("value8").innerHTML++;
+     	         document.getElementById("value8").innerHTML = 1;
       	  	    }else if(document.getElementById('valueDay').innerHTML == 9){
-     	         document.getElementById("value9").innerHTML++;
-        	    }else{document.getElementById("value10").innerHTML++;}
+     	         document.getElementById("value9").innerHTML = 1;
+        	    }else{document.getElementById("value10").innerHTML= 1;}
 			
-       		 } 
+       		 } else if(document.getElementById('valueL').innerHTML < 1000)
+		{
+			
+      		      if(document.getElementById('valueDay').innerHTML == 8){
+     	         document.getElementById("value8").innerHTML = 0;
+      	  	    }else if(document.getElementById('valueDay').innerHTML == 9){
+     	         document.getElementById("value9").innerHTML = 0;
+        	    }else{document.getElementById("value10").innerHTML= 0;}
+			
+       		 }
 
 
        		
