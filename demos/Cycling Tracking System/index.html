@@ -27,6 +27,11 @@
 	  <span id="value8"></span>
 	  <span id="value9"></span>
 	  <span id="value10"></span>
+	  if(document.getElementById('value88').innerHTML == 1){
+     	         document.getElementById("value8").innerHTML++;
+      	  	    }else if(document.getElementById('value99').innerHTML == 1){
+     	         document.getElementById("value9").innerHTML++;
+        	    }else{document.getElementById("value10").innerHTML++;}
 	  
 	<canvas id="mc" width="900" height="450" style="position: absolute; top: 200px;right: 300px;border:1px solid black;border-radius:30px;"></canvas>
 	<script type="text/javascript">
@@ -87,20 +92,21 @@ function draw(){
         	    }else{document.getElementById("value11").innerHTML = 0;}
 			
        		 } 
+		
 
 
        		
 		//折线
 		ctx.moveTo(80,180);
-		ctx.lineTo(160,200);
+		ctx.lineTo(160,180);
 		ctx.lineTo(240,200);
 		ctx.lineTo(320,130);
 		ctx.lineTo(400,180);
 		ctx.lineTo(480,170);
 		ctx.lineTo(560,120);
-		ctx.lineTo(640,'380'-5*document.getElementById('value88').innerHTML);
-		ctx.lineTo(720,'380'-5*document.getElementById('value99').innerHTML);
-		ctx.lineTo(800,'380'-5*document.getElementById('value11').innerHTML);
+		ctx.lineTo(640,'380'-5*document.getElementById('value8').innerHTML);
+		ctx.lineTo(720,'380'-5*document.getElementById('value9').innerHTML);
+		ctx.lineTo(800,'380'-5*document.getElementById('value10').innerHTML);
 		ctx.stroke();
 requestAnimationFrame(draw);
 }
